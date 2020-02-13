@@ -1,6 +1,6 @@
 # ansible systemd-timesyncd role
 
-[![Build Status](https://travis-ci.org/damex/ansible-role-systemd-timesyncd.svg?branch=master)](https://travis-ci.org/damex/ansible-role-systemd-timesyncd)
+[![Build Status](https://travis-ci.com/damex/ansible-role-systemd-timesyncd.svg?branch=master)](https://travis-ci.com/damex/ansible-role-systemd-timesyncd)
 
 The systemd-timesyncd role is designed to be used with Debian distributive.
 
