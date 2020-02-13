@@ -8,7 +8,8 @@ galaxy_info:
   galaxy_tags:
     - ntp
     - system
-    - systemd-timesyncd
+    - systemd
+    - timesyncd
   platforms:
     - name: "Debian"
       versions:
