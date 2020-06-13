@@ -1,19 +1,7 @@
 ---
-- name: ensure systemd
-  block:
-    - name: ensure systemd-timesyncd service is enabled
-      systemd:
-        name: "{{ systemd_timesyncd_service_name }}"
-        enabled: true
-
-    - name: ensure systemd-timesyncd service is started
-      systemd:
-        name: "{{ systemd_timesyncd_service_name }}"
-        state: "started"
-
-    - name: ensure systemd-timesyncd service is restarted
-      systemd:
-        name: "{{ systemd_timesyncd_service_name }}"
-        state: "restarted"
-      when: systemd_timesyncd_conf.changed
-  become: true
+- name: ensure systemd service
+  include_role:
+    name: "damex.systemd_service"
+  vars:
+    systemd_service_name: "{{ systemd_timesyncd_service_name }}"
+    systemd_service_restart_on: "{{ systemd_timesyncd_conf.changed }}"
